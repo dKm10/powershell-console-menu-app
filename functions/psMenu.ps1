@@ -20,7 +20,3 @@ function psMenu {
   return($option)
   
 }
-
-
-
-

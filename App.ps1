@@ -4,6 +4,8 @@ foreach ($psFunctioFile in $psFunctionFiles) {
   . $psFunctioFile
 }
 
+$exit_words = "Q", "q", "e", "E", "quit", "QUIT", "Quit", "exit", "EXIT", "Exit"
+
 # Display psMenu until Quit
 do {
   $option = psMenu
@@ -29,7 +31,7 @@ do {
       $mirror = Read-Host "Enter mirror account if any"
       $user ; $ticket ; $mirror ; Pause
     }
-    { ($_ -eq 'Q') -or ($_ -eq 'q') } {
+    { $exit_words -contains $_ } {
       Write-Host "Thanks for using this Application!!!"
       return
     }    
