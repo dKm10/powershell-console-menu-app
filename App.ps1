@@ -4,7 +4,7 @@ foreach ($psFunctioFile in $psFunctionFiles) {
   . $psFunctioFile
 }
 
-$exit_words = "Q", "q", "e", "E", "quit", "QUIT", "Quit", "exit", "EXIT", "Exit"
+$exit_words = "q", "e", "quit", "exit"
 
 # Display psMenu until Quit
 do {
